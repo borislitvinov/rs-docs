@@ -56,6 +56,17 @@ therefore, it's recommended remaining .default_env untouched and editing only th
 
 ### Configuration options
 
+{% assign params = site.data.parameters %}
+| Parameter | Required | Description | Default |
+|:---|:---|:---|:---|
+{% for param in params %}
+| {{ param[0] }} | {{ param[1].required | capitalize }} | {{ param[1].description | strip }} | {{ param[1].default | default: "None" }} |
+{% endfor %}
+
+
+
+### Configuration options
+
 | Value                        | Is Required                  | Description                                                                                                                                                                                                                                                             | Default Value                                |
 |------------------------------|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | ENV_NAME                     | Yes                          | The name of your environment. Set this in `rs_automation/.env` - the environment will be created automatically in case it does not exist.                                                                                                                               |                                              |

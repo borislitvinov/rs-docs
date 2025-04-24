@@ -1,0 +1,236 @@
+ENV_NAME:
+  required: true
+  description: The name of your environment. Set this in `rs_automation/.env` - the
+    environment will be created automatically in case it does not exist.
+  default: null
+ENV_PROVIDER:
+  required: true
+  description: 'Determines what provider to use to get environment parameters. Options:
+    `env0`/`file`/`simple`/`docker`/`ops`.'
+  default: env0
+RS_VERSION:
+  required: true
+  description: The RS version you are currently testing. Used for deployment or verification.
+  default: null
+RS_BUILD:
+  required: true
+  description: The RS build to use for the specified version.
+  default: null
+AWS_PROFILE:
+  required: true
+  description: Credential profile used to authenticate with AWS services.
+  default: null
+RLAUTO_SSH_PRIVATE_KEY:
+  required: false
+  description: Used to access cloud instances. Must match key-pair configured for
+    VM access.
+  default: null
+RLAUTO_SSH_PUBLIC_KEY:
+  required: false
+  description: Used to access cloud instances. Must match key-pair configured for
+    VM access.
+  default: null
+RLAUTO_SSH_KEY_PASSPHRASE:
+  required: false
+  description: SSH passphrase file path for ops instances.
+  default: null
+VAULT_USERNAME:
+  required: false
+  description: User for accessing vault ops instances.
+  default: null
+ENV_OS:
+  required: false
+  description: OS to be deployed (`focal`, `mariner`).
+  default: focal
+ARCHITECTURE:
+  required: false
+  description: Cluster architecture (`arm64` or `amd64`).
+  default: null
+LOCAL_BUILD:
+  required: false
+  description: Use local build for cluster deployment. Only supported on Docker provider.
+  default: 'False'
+LOCAL_BASE_IMAGE:
+  required: false
+  description: Base image name for local cluster deployment.
+  default: rlec-node1
+DOCKER_DEPLOY_PARAMS:
+  required: false
+  description: Parameters to add to docker cluster deployment.
+  default: null
+DOCKER_USERNAME:
+  required: false
+  description: Dockerhub username.
+  default: null
+DOCKER_PASSWORD:
+  required: false
+  description: Dockerhub password.
+  default: null
+MOUNT_CNM:
+  required: false
+  description: Docker param for mounting CNM.
+  default: 'False'
+LOCAL_CNM_PATH:
+  required: false
+  description: Docker param for setting local CNM directory.
+  default: null
+NODES_NUMBER:
+  required: false
+  description: Number of nodes in cluster.
+  default: '3'
+BOOTSTRAP:
+  required: false
+  description: Whether to bootstrap the cluster (`True` or `False`).
+  default: 'True'
+USE_ROF:
+  required: false
+  description: Use Redis on Flash (`True` or `False`).
+  default: 'False'
+WITNESS_DISK:
+  required: false
+  description: Enable witness disk (`True` or `False`).
+  default: 'False'
+AVAILABILITY_ZONES:
+  required: false
+  description: Number of availability zones (None/1/2/3).
+  default: None
+NETWORKING:
+  required: false
+  description: Network scheme (`ipv4`/`dual`/`ipv6`).
+  default: ipv4
+ENV0_ORGANIZATION_ID:
+  required: false
+  description: env0 organization ID.
+  default: 5680787a-664c-4bb7-b7f0-4b7a8b62b17c
+ENV0_PROJECT_ID:
+  required: false
+  description: env0 project ID.
+  default: 71e13502-a244-4bb7-bd5a-76e181fdfcc2
+ENV0_TOKEN:
+  required: true
+  description: Token for env0 access.
+  default: null
+CLOUD_PROVIDER:
+  required: false
+  description: Cloud provider name (`gcp`/`azure`/`aws`).
+  default: aws
+REGION:
+  required: false
+  description: Cloud region.
+  default: eu-west-1
+INSTANCE_TYPE:
+  required: false
+  description: Instance type for cluster nodes.
+  default: m5.large
+HOST_INSTANCE_TYPE:
+  required: false
+  description: Instance type for cluster nodes.
+  default: m5.large
+CLUSTER_COUNT:
+  required: false
+  description: Number of clusters for multimaster.
+  default: '3'
+ALLOWED_SSH_ADDRESS:
+  required: false
+  description: SSH access IP address.
+  default: null
+UPLOAD_COREDUMPS:
+  required: false
+  description: Upload coredumps to S3 (`True`/`False`).
+  default: 'False'
+UPLOAD_SUPPORT_PACKAGE:
+  required: false
+  description: Upload support package to S3 (`True`/`False`).
+  default: 'False'
+ENV_REDEPLOY:
+  required: false
+  description: Redeploy the environment if not active.
+  default: 'False'
+ENV_KEEP:
+  required: false
+  description: Keep environment after tests (`True`/`False`).
+  default: 'True'
+MAX_DEPLOYMENT_RETRIES:
+  required: false
+  description: Number of deployment retries.
+  default: '1'
+PYTEST_TIMEOUT:
+  required: false
+  description: Test timeout in seconds.
+  default: '21600'
+BOOTSTRAP_MASTER_PARAMS:
+  required: false
+  description: Bootstrap parameters for master nodes.
+  default: null
+BOOTSTRAP_NODES_PARAMS:
+  required: false
+  description: Bootstrap parameters for slave nodes.
+  default: null
+FILE_BASED_ENVIRONMENT_PATH:
+  required: false
+  description: Path to load environment data from.
+  default: null
+SIMPLE_ENVIRONMENT_DATA:
+  required: false
+  description: Simple JSON environment data.
+  default: null
+RP_API_KEY:
+  required: false
+  description: Personal API key for ReportPortal.
+  default: null
+RCP_SERVER_HOSTNAME:
+  required: true
+  description: Hostname for RCP environment.
+  default: null
+RCP_SERVER_USER:
+  required: true
+  description: Username for RCP server.
+  default: null
+RCP_SERVER_PASSWORD:
+  required: true
+  description: Password for RCP server.
+  default: null
+RCP_CLI_VERSION:
+  required: true
+  description: RCP CLI version to deploy.
+  default: null
+RCP_AWS_ACCESS_KEY_ID:
+  required: true
+  description: AWS credentials for RCP cluster creation.
+  default: null
+RCP_ALLOWED_IP:
+  required: true
+  description: Laptop external IP to whitelist.
+  default: null
+RESET_ENV:
+  required: false
+  description: Reset environment after test.
+  default: null
+SOURCE_VERSION:
+  required: false
+  description: Cluster version before upgrade.
+  default: null
+ENABLE_FIPS:
+  required: false
+  description: Enable FIPS mode.
+  default: null
+FLEXIBLE_SHARDS:
+  required: false
+  description: Enable flexible shards.
+  default: null
+DNS_SERVERS:
+  required: false
+  description: Custom DNS servers list.
+  default: null
+ENABLE_PLACEMENT_GROUP:
+  required: false
+  description: Enable cluster placement group.
+  default: null
+ENABLE_LIVENESS_CHECK:
+  required: false
+  description: Enable liveness check plugin.
+  default: null
+SCAN_LOGS_FOR_SECRETS:
+  required: false
+  description: Scan logs for secrets.
+  default: null

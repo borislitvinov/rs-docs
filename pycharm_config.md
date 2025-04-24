@@ -29,4 +29,3 @@ pytest -k "test_basic"
 ```
 
 Use the `-k` option to specify and run a particular test by its name pattern.
-
