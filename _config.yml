@@ -7,5 +7,5 @@ minima:
   skin: classic
 
 include:
-  - assets/css/style.css
+  - assets/css/index.css
 
