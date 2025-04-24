@@ -1,10 +1,7 @@
-theme: minima
+
 title: My Redis Docs
 markdown: kramdown
-
-# Add this:
-minima:
-  skin: classic
+remote_theme: just-the-docs/just-the-docs
 
 include:
   - assets/css/index.css
