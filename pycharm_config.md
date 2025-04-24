@@ -1,4 +1,5 @@
-### Running a test locally
+layout: default
+titele: Running a test locally
 Executing tests can be done using the IDE or the command line.
 Before running your first test, you need to configure a few options.
 
