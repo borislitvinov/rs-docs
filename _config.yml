@@ -1,0 +1,4 @@
+title: My Redis-Style Docs
+theme: minima  # or another theme you like
+markdown: kramdown
+
