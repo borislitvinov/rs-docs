@@ -39,7 +39,8 @@ The automation infrastructure relies on `pytest` as the tests' driver with the `
 5.**Additional Options to configure IDE**:
    - [Pycharm Guide (Recommended)](https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html#existing-virtual-environment), [VSCode Guide](https://code.visualstudio.com/docs/python/environments#_working-with-python-interpreters).
 
-- [Running test locally](pycharm_config.md)
+
+[Running test locally](pycharm_config.md)
 
 ## Configurations
 
