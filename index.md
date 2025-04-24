@@ -40,22 +40,6 @@ The automation infrastructure relies on `pytest` as the tests' driver with the `
    - [Pycharm Guide (Recommended)](https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html#existing-virtual-environment), [VSCode Guide](https://code.visualstudio.com/docs/python/environments#_working-with-python-interpreters).
 
 
-### Running a test locally
-Executing tests can be done using the IDE or the command line.
-Before running your first test, you need to configure a few options.
-
-#### PyCharm UI (Recommended)
-Pick desired test and press the 'play' button.
-
-![Walkthrough](img/play_test_from_ui.gif)
-
-#### Command line example
-```shell
-pytest -k "test_basic"
-```
-
-----
-
 ## Configurations
 
 ### Options for passing in configuration parameters:
