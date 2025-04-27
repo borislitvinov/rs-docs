@@ -1,6 +1,8 @@
 
-title: My Redis Docs
+title: Redis Enterprise Automation Framework
 markdown: kramdown
+nav_enabled: true
+
 remote_theme: just-the-docs/just-the-docs
 
 include:
