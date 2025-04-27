@@ -54,7 +54,7 @@ The automation infrastructure relies on `pytest` as the tests' driver with the `
 > It's allowed to have the same variables on both .env and .default_env - in this case, the value under .env will be taken
 therefore, it's recommended remaining .default_env untouched and editing only the .env file
 
-### Configuration options
+[Configuration options]
 
 {% assign params = site.data.parameters %}
 | Parameter | Required | Description | Default |
